@@ -1,0 +1,59 @@
+import java.util.Scanner;
+
+public class Deliverable1 {
+
+	public static void main(String[] args) {
+		//initialize the 2 input integers
+		int num1;
+		int num2;
+		
+		//introduce scanner for user input
+		Scanner scnr = new Scanner(System.in);
+		
+		//request user input of two 3-digit integers
+		System.out.println("Enter a 3 digit number: ");
+	    num1 = scnr.nextInt();
+	      
+	    System.out.println("Enter another 3 digit number: ");
+	    num2 = scnr.nextInt();
+	      
+		//convert integers to strings to use charAt()
+	    String numString1 = Integer.toString(num1);
+	    String numString2 = Integer.toString(num2);
+	    
+	    char a = numString1.charAt(0);
+	    char b = numString1.charAt(1);
+	    char c = numString1.charAt(2);
+	    
+	    char d = numString2.charAt(0);
+	    char e = numString2.charAt(1);
+	    char f = numString2.charAt(2);
+	    
+	    //convert characters to integer values to enable math functions
+	    
+	    int newIntA = numString1.charAt(0) - '0';
+	    int newIntB = numString1.charAt(1) - '0';
+	    int newIntC = numString1.charAt(2) - '0';
+	    
+	    int newIntD = numString2.charAt(0) - '0';
+	    int newIntE = numString2.charAt(1) - '0';
+	    int newIntF = numString2.charAt(2) - '0';
+	    
+	    //create sum integers for If-Else statement
+	    
+	    int x = newIntA + newIntD;
+	    int y = newIntB + newIntE;
+	    int z = newIntC + newIntF;
+	    
+	    //create If-Else statement
+	    
+	    if ((x == y) && (x == z) && (y == z)) {
+	    	System.out.println("True");
+	    }
+	    else {
+	    	System.out.println("False");
+	    }
+ 
+	}
+
+}
